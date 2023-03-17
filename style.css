@@ -1,0 +1,1385 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+                                            /* МОДАЛЬНОЕ ОКНО LOGIN */
+.modal_login{
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+}
+#oknoimg{
+    height: 70px;
+}
+
+.okoshka{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.wrapper{
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #d35924;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #d35924;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #d35924;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+                                            /*МОДАЛЬНОЕ ОКНО LOGIN*/
+.divcontainer > .list{
+    width: 40%;
+}
+.Tastecookies{
+    height: 77%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.img{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.burger{
+    display: none; 
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 4px;
+    width: 80%;
+    transform: scale(1);
+    background-color: white;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {top: 0}
+
+.burger::after {bottom: 0}
+
+.burger.active span{transform: scale(0);}
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+
+header{
+    height: 4vh;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+header span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.first-block{
+    height: 96vh;
+    background-image: url(./img/Rectangle\ \(30\).svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.divcontainer{
+    padding-top: 30px;    
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.divcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divcontainer .list button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;    
+    text-transform: uppercase;  
+    color: #000000;
+}
+
+
+.Fbutton{
+    justify-content: space-between;
+}
+
+
+.Fbutton, .Sbutton{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img{
+    width: 10%;
+}
+
+#en{
+    height: 20px;
+}
+
+.Taste h1{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 94px;
+}
+
+.circlebutton{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.FindYourSoul{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+}
+
+.cookies{
+    padding-right: 2%;
+    display: flex;
+    justify-content: end;
+}
+.cookies > div{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 78px;
+    padding: 10px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cookies button{
+    margin-left: 120px;
+    height: 35px;
+    background: #F5AFB9;
+    border-radius: 17.5px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border: none;
+}
+
+.cookies span{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px; 
+} 
+
+.second-block{
+    background: #ED7B49;
+    padding-top: 100px;
+}
+
+.Widly-loved{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    align-items: flex-end;
+}
+
+.Widly-loved div{
+    padding-bottom: 20px;
+}
+
+.loved{
+    margin-left: 126px;
+}
+
+.Widly-loved div > h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 94px;
+}
+
+.Widly-loved div > p, .Discover div > p, .nut div :nth-child(2), .words div > div p, .halva div p, .wildrecepies p, .recipes p, #more4{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.Concept_Store p{
+    font-size: 1.2em;
+}
+.rocroll{
+    display: flex;
+    position: relative;
+    z-index: 100;
+    bottom: 10%;
+    left: 26%;
+    align-items: center;
+    justify-content: center;
+}
+#ruka{
+    position: absolute;
+}
+
+.coffee {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 132px;
+    margin-bottom: 392px;
+    padding-bottom: 40px;
+}
+
+.coffee div > button{
+    margin-top: 9px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 36px;
+    padding: 10px 45px;
+    margin-left: 10px;
+}
+
+.coffee > div{
+    margin-left: 60px;
+}
+
+.Fcoffee, .Thcoffee{
+    margin-top: 140px;
+}
+.coffee div > div{
+    border-radius: 275px;
+}
+
+.Fcoffee, .Fbutton{
+    background: #72A080;
+}
+
+.Scoffee, .Sbutton{
+    background: #A95D50;
+}
+
+.Thcoffee, .Thbutton{
+    background: #ABAFD6;
+}
+
+.Focoffee, .Fobutton{
+    background: #FECF6B;
+}
+
+.Discover{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+.Discover h1, .left50 > h1, .zeroPlastic1 h1, .zeroPlastic, .WildLeft > h1, .wildrecepies h1, #StayWild{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 94px;
+}
+
+.Discover p{
+    margin-top: 20px;
+}
+
+.Discover button, .zeroPlastic button, .zeroPlastic1 button{
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 32px;
+    padding: 0px 64px;
+    background: black;
+    color: white;
+    margin-top: 47px;
+}
+
+
+.CoffeeFooter{
+    display: flex;
+}
+
+.right50{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding-left: 8%;
+
+}
+
+.right50 .Seame > p{
+    font-weight: 400;
+font-size: 21px;
+line-height: 32px;
+margin-top: 102px;
+margin-bottom: 91px;
+}
+
+.right50 .Seame{
+    width: 41%;
+}
+.left50{
+    background: #BE5A4B;
+    padding-left: 10%;
+    border-radius: 0px 220px 0px 0px;
+    width: 50%;
+    padding-bottom: 75px;
+}
+
+.left50 h1{
+    margin-top: 94px;
+}
+
+.left50 > div h1, .recipes h1{
+    font-style: normal;
+font-weight: 700;
+font-size: 42px;
+line-height: 50px;
+display: inline;
+margin-top: 94px;
+}
+
+.nut{
+    display: flex;
+    padding-right: 20px;
+    margin-top: 50px;
+}
+
+.nut div :nth-child(2){
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+
+.nut div button{
+    margin-top: 46px;
+    background: black;
+    color: white;
+    padding: 0 45px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 40px;
+}
+
+#span{
+    font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 50px;
+}
+
+.Seame div > div :nth-child(2){
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 0px;
+}
+
+.Seame div > div{
+    margin-bottom: 40px;
+    display: flex;
+    border-bottom: solid 1px;
+}
+
+.Seame div > div p {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.words{
+    background: #E9A8C6;
+    height: 70vh;
+    display: flex;
+}
+#Voiceh1, #Voicetext, #popaganda, #popagandatext{
+    display: none;
+}
+#Voiceh1, #popaganda, #popagandah1svoy, #Athensh1svoy{
+    width: 100%;
+    justify-content: center;
+}
+
+.wordcontainer{
+    width: 60%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 129px;
+    padding-bottom: 100px;
+}
+
+.wordcontainer > div{
+    width: 40%;
+}
+
+.words h1{
+    font-weight: 700;
+font-size: 18px;
+line-height: 27px;
+margin-top: 25px;
+}
+
+.words span{
+    font-weight: 400;
+font-size: 21px;
+line-height: 25px;
+}
+
+#whiteblock{
+    width: 16px;
+    height: 16px;
+    border: solid 1px black;
+}
+
+#blackblock{
+    width: 16px;
+    height: 16px;
+    background: black;
+    border: solid 1px black;
+}
+
+
+#blocks div{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+#blocks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thourd-block{
+    background: #F5AFB9;
+    padding-top: 72px;
+    padding-bottom: 335px;
+}
+
+.zeroPlastic1{
+    padding-left: 10%;
+    display: flex;
+    margin-bottom: 462px;
+    justify-content: space-between;
+    padding-right: 5%;
+    height: 1200px;
+}
+
+
+.WildHalva{
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.WildHalva > div{
+    width: 50%;
+}
+
+.WildLeft{
+    background: #ABAFD6;
+    padding-left: 10%;
+    border-radius: 0px 220px 0px 0px;
+    padding-top: 90px;
+    padding-bottom: 75px;
+}
+
+.halva div > h1{
+    font-weight: 700;
+font-size: 42px;
+line-height: 50px;
+margin-top: 53px;
+margin-bottom: 62px;
+}
+
+.halva{
+    display: flex;
+}
+
+
+
+.halva span{
+    font-weight: 400;
+font-size: 21px;
+line-height: 32px;
+margin-top: 21px;
+margin-bottom: 46px;
+
+}
+
+.halva p{
+    margin-bottom: 21px;
+}
+
+.halva button{
+    border: none;
+    background: black;
+    color: white;
+    padding: 0px 42px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 40px;
+    margin-top: 45px;
+}
+
+.Wildright > div{
+    background: #EC4844;
+    height: 100%;
+    width: 75%;
+    margin-left: 20px;
+    text-align: center;
+    padding: 65px 50px;
+}
+
+.Wildright h1{
+    font-weight: 700;
+font-size: 42px;
+line-height: 50px;
+width: 70%;
+margin: auto;
+margin-bottom: 30px;
+margin-top: 40px;
+}
+
+.Wildright button{
+    background: #000000;
+border-radius: 40px;
+color: white;
+    padding: 16px 42px;
+}
+
+.wildrecepies{
+    width: 33%;
+    margin-left: auto;
+    margin-right: 20%;
+    margin-bottom: 192px;
+}
+
+.recipes{
+    display: flex;
+}
+
+#middlerecipes{
+    margin-top: 45px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.recipes div :nth-child(2){
+    margin-top: 43px;
+    margin-bottom: 15px;
+}
+
+footer{
+    background: #BE5A4B;
+    padding-top: 135px;
+}
+
+
+#palchik{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 116px;
+}
+
+footer > div{
+    width: 80%;
+    margin: auto;
+}
+
+.StayWild{
+    display: flex;
+}
+
+.StayWild > div{
+    width: 50%;
+}
+
+.Zamarochki{
+    display: flex;
+}
+
+.Zamarochki h1{
+    font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+}
+
+.Zamarochki p{
+    font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+margin-top: 21px;
+cursor: pointer;
+}
+
+.Contact, .Help{
+    margin-top: 81px;
+}
+
+.Products{
+    margin-right: 76px;
+    width: 50%;
+}
+
+.footerfooter img{
+    margin-right: 117px;
+}
+
+.footerfooter{
+    display: flex;
+    overflow-y: hidden;
+    margin-top: 151px;
+}
+
+#Email{
+    border-bottom: solid 1px black;
+    width: 78%;
+    margin-bottom: 112px;
+    margin-top: 45px;
+}
+
+.Folowus, h1{
+    font-weight: 400;
+font-size: 32px;
+line-height: 38px;
+margin-bottom: 23px;
+}
+
+#Folowus img{
+    margin-right: 18px;
+}
+
+#Folowus{
+    margin-bottom: 74px;
+}
+
+.visa img{
+    margin-right: 14px;
+    margin-bottom: 19px;
+}
+.Widly-loved > div{
+    display: flex;
+}
+
+.Widly-loved img{
+    height: 240px;
+}
+
+.visa p{
+    font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.OurWIldWay{
+    width: 35%;
+}
+
+.width100{
+    display: flex;
+}
+
+#rotateimg1{
+z-index: 10;
+}
+
+#rotateimg2{
+    position: absolute;
+}
+
+#rotateimg3{
+    right: 11%;
+    position: absolute;
+}
+
+.widthpatno{
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 70%;
+    justify-content: center;
+}
+#patno1{
+    position: absolute;
+    height: 561px;
+    z-index: 10;
+}
+#patno2{
+    position: absolute;
+    height: 561px;
+    left: 2%;
+    bottom: 31%;
+}
+#patno3{
+    position: absolute;
+    height: 561px;
+    right: 3%;
+    bottom: 31%;
+}
+.Gluten{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#No{
+    position: absolute;
+    height: 92px;
+    width: 54px;
+}
+
+.thourd-block .zeroPlastic1 .width100{
+    position: relative;
+    align-items: center;
+    width: 70%;
+    justify-content: center;
+}
+#kaktus1{
+    z-index: 10;
+}
+.thourd-block .zeroPlastic1 .width100 img:nth-of-type(1){
+    height: 623px;
+}
+
+.thourd-block .zeroPlastic1 .width100 img:nth-of-type(2){
+    height: 623px;
+    right: 41.77%;
+    bottom: 29%;
+}
+
+.thourd-block .zeroPlastic1 .width100 img:nth-of-type(3){
+    height: 623px;
+    bottom: 29%;
+left: 40.13%;
+right: -60.87%;
+}
+
+#kaktusglobus{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 60%;
+    bottom: 159px;
+    justify-content: center;
+}
+
+#globus{
+    position: absolute;
+}
+.thourd-block .zeroPlastic1 .width100 img{
+    position: absolute;
+}
+
+#more{
+    display: none;
+}
+#more2{
+    display: none;
+}
+#more3{
+    display: none;
+}
+#more4{
+    display: none;
+}
+#more5{
+    display: none;
+    width: 80%;
+}
+#btnDiscover4{
+    display: block;
+}
+#btnDiscover5{
+    margin-top: 20px;
+}
+.FiveTreasures{
+    width: 30%;    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Concept_Store{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background: #d4d4d4;
+    box-shadow: 0 0 2px rgba(0, 0, 0,.2) inset;
+}
+::-webkit-scrollbar-thumb{
+    background: #939393;
+    box-shadow: 0 0 2px rgba(0, 0, 0,.2) inset;
+    border: 3px solid #d4d4d4;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #7c7c7c;
+}
+
+
+
+
+
+.coffee::-webkit-scrollbar{
+    height: 12px;
+}
+.coffee::-webkit-scrollbar-track{
+    background: #d4d4d4;
+    box-shadow: 0 0 2px rgba(0, 0, 0,.2) inset;
+}
+.coffee::-webkit-scrollbar-thumb{
+    background: #939393;
+    box-shadow: 0 0 2px rgba(0, 0, 0,.2) inset;
+    border: 3px solid #d4d4d4;
+    border-radius: 30px;
+}
+.coffee::-webkit-scrollbar-thumb:hover{
+    background: #7c7c7c;
+}
+
+.cardModal{
+    background-color: rgba(27, 19, 19, 0.297);
+    overflow-y: scroll;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 80%;
+}
+.okoshka p{
+    font-size: 0.9em;
+}
+#Writeemail {
+    margin-bottom: 40px;
+    background: transparent;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 60%;
+    height: 50px;
+    outline: none;
+}
+#Writeemail::-webkit-input-placeholder {
+    color:    black;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.recipes{
+    display: flex;
+    justify-content: center
+}
+
+.burger_menu{
+    display: none;
+}
+
+@media(max-width:576px){
+    #kaktusglobus {
+        left: 0%;
+        position: inherit;
+    }
+    .thourd-block .zeroPlastic1 .width100 {
+        width: normal;
+    }
+    .thourd-block .zeroPlastic1 .width100 img:nth-of-type(1) {
+        height: 370px;
+    }
+    .thourd-block .zeroPlastic1 .width100 img:nth-of-type(2) {
+        height: 370px;
+        right: 20%;
+        bottom: auto;
+    }
+    .thourd-block .zeroPlastic1 .width100 img:nth-of-type(3) {
+        height: 369px;
+        bottom: inherit;
+        left: 20%;
+    }
+    .first-block{
+        padding-top: 20px;
+    }
+    .wrapper {
+        width: 344px;
+        height: 407px;
+    margin-top: 100px;
+    }
+    .burger {
+        margin-left: auto;
+        right: 0;
+        position: fixed;
+        display: block;
+        display: flex;
+        justify-content: end;
+        margin-right: 20px;
+        height: 30px;
+    }
+
+    .burger span {
+        display: block;
+    }
+
+    .burger_menu{   
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, rgba(255, 255, 255, .5));
+        color: whitesmoke;
+        display: block;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: -100%; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        animation: burgeranimation 0.4s ;
+    }
+    .active{
+        left: 0;
+    }
+    .burger_menu li{
+        list-style-type: none;
+        margin-top: 60px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .divcontainer{
+        display: none;
+    }
+
+    #width100{
+        height: 250px;
+    }
+    .WildLeft{
+        padding-left: 0px;
+    }
+    .width100 img{
+        width: 100%;
+    }
+
+    .OurWIldWay {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .nut{
+        flex-direction: column;
+        padding-right: 0px;
+    }
+    .semechki{
+        display: flex;
+        justify-content: center;
+    }
+    .left50{
+        padding-left: 0px;
+    }
+    .halva{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .brevno{
+        display: flex;
+        justify-content: center;
+    }
+    .recipes img{
+        height: 390px;
+    }
+    .first-block{
+        width: 100%;
+    }
+    .cookies{
+        justify-content: center;
+        margin-top: 200px;
+    }
+    .Widly-loved > div{
+        flex-direction: column;
+    }
+    .Widly-loved div {
+        padding-bottom: 20px;
+        margin: auto;
+    }
+    .Gluten{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .img{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .Taste h1 {
+        margin-top: 126px;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 66px;
+    }
+    .Widly-loved{
+        justify-content: center;
+
+    }
+    .FindYourSoul{
+        display: flex;
+        height: 50%;
+        justify-content: space-between;
+    }
+    .Widly-loved{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: auto;
+    }
+    .cookies > div {
+        margin-left: 0px;
+    }
+    .coffee > div{
+        margin-left: 16px;
+    }
+    .coffee {
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .Discover {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 250px;
+        text-align: center;
+    }
+    #OurWIldWay{
+        margin-bottom: 40px;
+    }
+    .CoffeeFooter{
+        flex-direction: column;
+    }
+    .left50{
+        width: 100%;
+    }
+    .right50 .Seame {
+        width: 100%;
+    }
+    .right50{
+        width: 100%;
+    }
+    .words{
+        height: 80vh;
+    }
+    .wordcontainer{
+        width: 90%;
+    }
+    .zeroPlastic1 {
+        margin-bottom: 300px;
+        padding: 0;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .thourd-block .zeroPlastic1 .width100 {
+        align-items: normal;
+    }
+    .FiveTreasures{
+        width: 100%;
+    }
+    .widthpatno {
+        margin-top: 100px;
+    }
+    
+    .rocroll{
+        position: inherit;
+    }
+    .zeroPlastic1 div{
+        width: 100%;
+    margin-bottom: 50px;
+    }
+    #neplastic{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+    }
+    .zadolbals{
+        margin-top: 40px;
+    }
+    #patno1 {
+        width: 10;
+        position: absolute;
+        height: 370px;
+        z-index: 10;
+    }
+    #patno2 {
+        position: inherit;
+        width: 115%;
+        left: 40%;
+        bottom: 60px;
+        height: 370px;
+    }
+    #patno3 {
+        position: inherit;
+    width: 115%;
+    height: 370px;
+    bottom: 60px;
+    right: 45%;
+    }
+    .zadolbals p {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .WildHalva {
+        flex-direction: column;
+    }
+    .WildHalva > div {
+        width: 100%;
+    }
+    .Wildright > div {
+        width: 100%;
+        margin-left: 0px
+    }
+    .Wildright button {
+        margin-bottom: 40px;
+    }
+    .wildrecepies {
+        text-align: center;
+        margin-top: 100px;
+        margin-right: auto;
+    margin-left: auto;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+    .recipes{
+        flex-direction: column;
+    }
+    .recipes div{
+        margin-bottom: 40px;
+    }
+    #middlerecipes {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .recipes div :nth-child(2) {
+        margin-top: 16px;
+        margin-bottom: 17px;
+    }
+    .StayWild { 
+        flex-direction: column;
+    }
+    .StayWild > div {
+        width: 100%;
+    }
+    .inputEmail{
+        margin-bottom: 40px;
+    }
+    .footerfooter {
+        margin-top: 30px;
+    }
+    .thourd-block {
+        padding-bottom: 50px;
+        padding-top: 0px;
+    }
+    .width100{
+        display: flex;
+        justify-content: center;
+    }
+}

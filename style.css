@@ -880,6 +880,7 @@ z-index: 10;
 }
 
 .widthpatno{
+    margin-left: auto;
     display: flex;
     position: relative;
     align-items: center;
@@ -887,6 +888,7 @@ z-index: 10;
     justify-content: center;
 }
 #patno1{
+    bottom: -10px;
     position: absolute;
     height: 561px;
     z-index: 10;
@@ -983,6 +985,7 @@ right: -60.87%;
     margin-top: 20px;
 }
 .FiveTreasures{
+    margin-left: 10%;
     width: 30%;    display: flex;
     flex-direction: column;
     align-items: center;
